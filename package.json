@@ -1,5 +1,5 @@
 {
-  "name": "llmpdf",
+  "name": "@sotanengel/llmpdf",
   "version": "0.1.0",
   "description": "AI向けテキストをPDFに付与するCLIツール",
   "type": "module",
