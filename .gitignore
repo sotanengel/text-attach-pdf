@@ -4,3 +4,4 @@ dist/
 *.llm.pdf
 .DS_Store
 coverage/
+test/fixtures/tmp/
