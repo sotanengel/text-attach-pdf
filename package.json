@@ -1,0 +1,56 @@
+{
+  "name": "llmpdf",
+  "version": "0.1.0",
+  "description": "AI向けテキストをPDFに付与するCLIツール",
+  "type": "module",
+  "bin": {
+    "llmpdf": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write .",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:integration": "vitest run test/cli/integration.test.ts",
+    "prepublishOnly": "pnpm build"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,yml,md}": "prettier --write"
+  },
+  "keywords": [
+    "pdf",
+    "llm",
+    "ai",
+    "cli"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@cantoo/pdf-lib": "^2.7.1",
+    "citty": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@typescript-eslint/eslint-plugin": "^8.60.0",
+    "@typescript-eslint/parser": "^8.60.0",
+    "eslint": "^10.4.0",
+    "lefthook": "^2.1.8",
+    "lint-staged": "^17.0.5",
+    "prettier": "^3.8.3",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}
