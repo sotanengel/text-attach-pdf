@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.tgz
+*.llm.pdf
+.DS_Store
+coverage/
