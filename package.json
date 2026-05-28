@@ -37,6 +37,9 @@
     "cli"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "@cantoo/pdf-lib": "^2.7.1",
     "citty": "^0.2.2"
