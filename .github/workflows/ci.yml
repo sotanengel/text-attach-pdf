@@ -17,6 +17,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Configure Takumi Guard registry
+        run: |
+          echo "registry=https://npm.flatt.tech/" >> .npmrc
+          echo "//npm.flatt.tech/:_authToken=${{ secrets.TAKUMI_GUARD_TOKEN }}" >> .npmrc
+
       - uses: pnpm/action-setup@v4
         with:
           version: 10
