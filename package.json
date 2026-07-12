@@ -1,7 +1,7 @@
 {
   "name": "@sotanengel/llmpdf",
   "version": "0.1.0",
-  "description": "AI\u5411\u3051\u30c6\u30ad\u30b9\u30c8\u3092PDF\u306b\u4ed8\u4e0e\u3059\u308bCLI\u30c4\u30fc\u30eb",
+  "description": "AI向けテキストをPDFに付与するCLIツール",
   "type": "module",
   "bin": {
     "llmpdf": "dist/cli.js"
@@ -21,7 +21,9 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:integration": "vitest run test/cli/integration.test.ts",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "pretest": "pnpm build",
+    "pretest:run": "pnpm build"
   },
   "lint-staged": {
     "*.ts": [
