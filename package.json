@@ -21,7 +21,9 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:integration": "vitest run test/cli/integration.test.ts",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "pretest": "pnpm build",
+    "pretest:run": "pnpm build"
   },
   "lint-staged": {
     "*.ts": [
@@ -54,6 +56,17 @@
     "prettier": "^3.8.3",
     "tsup": "^8.5.1",
     "typescript": "^6.0.3",
+    "vite": "8.0.16",
     "vitest": "^4.1.7"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": ">=0.28.1",
+      "vite": ">=8.0.16"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "lefthook"
+    ]
   }
 }
