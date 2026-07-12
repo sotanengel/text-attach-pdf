@@ -1,7 +1,7 @@
 {
   "name": "@sotanengel/llmpdf",
   "version": "0.1.0",
-  "description": "AI向けテキストをPDFに付与するCLIツール",
+  "description": "AI\u5411\u3051\u30c6\u30ad\u30b9\u30c8\u3092PDF\u306b\u4ed8\u4e0e\u3059\u308bCLI\u30c4\u30fc\u30eb",
   "type": "module",
   "bin": {
     "llmpdf": "dist/cli.js"
@@ -54,6 +54,17 @@
     "prettier": "^3.8.3",
     "tsup": "^8.5.1",
     "typescript": "^6.0.3",
+    "vite": "8.0.16",
     "vitest": "^4.1.7"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": ">=0.28.1",
+      "vite": ">=8.0.16"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "lefthook"
+    ]
   }
 }
